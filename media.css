@@ -1,0 +1,101 @@
+/* Media Queries for Mobile Devices */
+@media screen and (max-width: 768px) {
+    .todo-container {
+        width: 90%; 
+        padding: 20px;
+        top: 50px; 
+    }
+
+    input[type="text"] {
+        width: calc(100% - 30px);
+        padding: 8px 12px;
+        font-size: 14px; 
+    }
+
+    button {
+        padding: 5px; 
+        font-size: 14px; 
+        width: 180px;
+      
+    }
+
+    li {
+        padding: 8px; 
+        font-size: 14px; 
+        margin-bottom: 8px; 
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    li span {
+        flex: 1; 
+        margin-right: 10px; 
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+    }
+
+    .scanner span {
+        font-size: 1.2rem; 
+        left: 220px;
+    }
+
+    .scanner span::before {
+        border-right-width: 3px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .todo-container {
+        padding: 10px; 
+        top: 100px; 
+    }
+
+    input[type="text"] {
+        padding: 6px 10px; 
+        font-size: 12px; 
+    }
+    button.delete {
+        width: 28%;
+        gap: 8px;
+        height: 20px;
+    }
+
+    button.edit {
+        width: 25%;
+        gap: 8px;
+        height: 20px;
+    }
+    button {
+        padding: 6px; 
+        font-size: 10px; 
+        width: 70px; 
+        width: 100px;
+    }
+    li {
+        padding: 6px;
+        font-size: 12px;
+        margin-bottom: 6px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    li span {
+        flex: 1; 
+        margin-right: 8px; 
+        white-space: nowrap; 
+        overflow: hidden; 
+        text-overflow: ellipsis;
+    }
+
+    .scanner span {
+        font-size: 1rem; 
+        left: 100px;
+    }
+
+    .scanner span::before {
+        border-right-width: 2px; 
+    }
+}

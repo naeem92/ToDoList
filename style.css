@@ -1,0 +1,165 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom , #13585a, #30f8ff);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+@keyframes colorChange {
+    0% {
+        background: linear-gradient(0deg,#00b4c4, #014b51);  
+    }
+    10% {
+        background: linear-gradient(36deg, #00b4c4, #014b51);  
+    }
+    20% {
+        background: linear-gradient(72deg, #00b4c4, #014b51);  
+    }
+    30% {
+        background: linear-gradient(108deg,#00b4c4, #014b51);  
+    }
+    40% {
+        background: linear-gradient(1440deg, #00b4c4, #014b51);  
+    }
+    50% {
+        background: linear-gradient(180deg,#00b4c4, #014b51);  
+    }
+    60% {
+        background: linear-gradient(216deg,#00b4c4, #014b51);  
+    }
+    70% {
+        background: linear-gradient(252deg,#00b4c4, #014b51); 
+    }
+    80% {
+        background: linear-gradient(288deg,#00b4c4, #014b51);  
+    }
+    90% {
+        background: linear-gradient(324deg,#00b4c4, #014b51);  
+    }
+    100% {
+        background: linear-gradient(360deg,#00b4c4, #014b51); 
+    }
+   
+}
+.todo-container {
+    border: 1px solid white;
+    box-shadow: 0 4px 8px rgb(255, 255, 255);
+    padding: 30px;
+    border-radius: 10px;
+    width: 500px;
+    position: absolute;
+    top: 100px;
+    animation: colorChange 12s ease-in  infinite;  
+}
+.scanner span {
+    color: transparent;
+    font-size: 1.4rem;
+    position: relative;
+    overflow: hidden;
+    left: 180px;
+    
+}
+.scanner span::before {
+    content: "To-Do-List...";
+    position: absolute;
+    top: 0;
+    left: 0px;
+    width: 0;
+    height: 100%;
+    border-right: 4px solid #ffffff;
+    overflow: hidden;
+    color: #ffffff;
+    animation: loading 2.5s linear infinite;
+}
+@keyframes loading {
+    0%, 10%, 100% {
+        width: 0;
+    }
+
+    10%, 20%, 30%, 40%, 50%, 60%, 70%, 80%, 90%, 100% {
+        border-right-color: transparent;
+    }
+
+    11%, 21%, 31%, 41%, 51%, 61%, 71%, 81%, 91% {
+        border-right-color: #ffffff;
+    }
+
+    60%, 80% {
+        width: 100%;
+    }
+}
+input[type="text"] {
+    width: calc(100% - 40px);
+    padding: 10px 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s;
+    margin-block: 10px;
+    border: 1px solid #00dde5;
+    color: #056c70;
+    font-size: 16px;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li {
+    padding: 10px;
+    background: #118a95;
+    margin-bottom: 3px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    color: white;
+    font-weight: 700;
+    border: 1px solid white;
+    box-shadow: 0 3px 8px rgb(255, 255, 255);
+}
+li .task-text {
+    flex-grow: 1; 
+    text-align: left; 
+}
+button {
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    background-image: linear-gradient(to top, #30cfd0 0%, #032326 100%);
+    border: solid 3px transparent;
+    background-clip: padding-box;
+    min-height: 32px;
+    padding: 0 13px;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.5s ease;
+    box-shadow: 0 3px 3px rgb(255, 255, 255);
+}
+button.edit {
+    width: 25%; 
+    justify-content: center;
+    justify-content: space-evenly;
+}
+button.delete {
+    width: 25%;
+    justify-content: space-evenly; 
+    margin-left: 8px;
+}
+button:active {
+    transform: scale(0.9);
+    transition: all 100ms ease;
+}
+button svg {
+    width: 14px;
+}
